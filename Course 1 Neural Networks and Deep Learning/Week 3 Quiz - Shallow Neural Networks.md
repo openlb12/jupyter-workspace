@@ -2,10 +2,12 @@
 
 1. Which of the following are true? (Check all that apply.) **Notice that I only list correct options.**
 
+
     - [x] X is a matrix in which each column is one training example.
     - [x] a^[2]_4 is the activation output by the 4th neuron of the 2nd layer
     - [x] a^\[2\](12) denotes the activation vector of the 2nd layer for the 12th training example.
     - [x] a^[2] denotes the activation vector of the 2nd layer.
+
     
     Note: If you are not familiar with the notation used in this course, check [here](https://www.coursera.org/learn/neural-networks-deep-learning/resources/YsZjP).
 
@@ -20,8 +22,10 @@
     
 3. Which of these is a correct vectorized implementation of forward propagation for layer l, where 1≤l≤L?
 
+
     - [x] Z^[l]=W^[l]A^[l−1]+b^[l]
     - [x] A^[l]=g^\[l](Z^[l])
+
 
 4. You are building a binary classifier for recognizing cucumbers (y=1) vs. watermelons (y=0). Which one of these activation functions would you recommend using for the output layer?
 
