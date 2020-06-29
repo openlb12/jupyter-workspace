@@ -220,25 +220,28 @@ def L_model_backward_test_case():
     np.array([[ 0.]])),
    np.array([[ 0.41791293,  1.91720367]]))])
    """
-    # np.random.seed(1)
-    AL = np.random.randn(1, 2)
-    Y = np.array([[1, 0]])
+    np.random.seed(1)
+    
+    X = np.random.rand(3,2)
+    Y = np.array([[1, 1]])
 
     A1 = np.random.randn(4,2)
     W1 = np.random.randn(3,4)
-    b1 = np.random.randn(3,1)
+    b1 = np.zeros((3,1))
     Z1 = np.random.randn(3,2)
     linear_cache_activation_1 = ((A1, W1, b1), Z1)
 
     A2 = np.random.randn(3,2)
     W2 = np.random.randn(1,3)
-    b2 = np.random.randn(1,1)
+    b2 = np.zeros((1,1))
     Z2 = np.random.randn(1,2)
     linear_cache_activation_2 = ( (A2, W2, b2), Z2)
+    
+    AL = np.random.randn(1, 2)
 
     caches = (linear_cache_activation_1, linear_cache_activation_2)
 
-    return AL, Y, caches
+    return X, Y, AL, caches
 
 def update_parameters_test_case():
     """
@@ -282,7 +285,7 @@ def update_parameters_test_case():
  'db2': 0.86163759922811056,
  'db3': -0.84161956022334572}
     """
-    # np.random.seed(1)
+    np.random.seed(1)
     W1 = np.random.randn(3,4)
     b1 = np.random.randn(3,1)
     W2 = np.random.randn(1,3)
