@@ -117,10 +117,9 @@ def predict_test_case():
         [ -2.54560700e-06]]),
      'b2': np.array([[  9.14954378e-05]])}
     return parameters, X_assess
-import numpy as np
 
 def linear_forward_test_case():
-    np.random.seed(1)
+    # np.random.seed(1)
     """
     X = np.array([[-1.02387576, 1.12397796],
  [-1.62328545, 0.64667545],
@@ -141,7 +140,7 @@ def linear_activation_forward_test_case():
     W = np.array([[ 0.74505627, 1.97611078, -1.24412333]])
     b = 5
     """
-    np.random.seed(2)
+    # np.random.seed(1)
     A_prev = np.random.randn(3,2)
     W = np.random.randn(1,3)
     b = np.random.randn(1,1)
@@ -184,7 +183,7 @@ def linear_backward_test_case():
        [-1.62328545,  0.64667545],
        [-1.74314104, -0.59664964]]), np.array([[ 0.74505627,  1.97611078, -1.24412333]]), np.array([[1]]))
     """
-    np.random.seed(1)
+    # np.random.seed(1)
     dZ = np.random.randn(1,2)
     A = np.random.randn(3,2)
     W = np.random.randn(1,3)
@@ -196,7 +195,7 @@ def linear_activation_backward_test_case():
     """
     aL, linear_activation_cache = (np.array([[ 3.1980455 ,  7.85763489]]), ((np.array([[-1.02387576,  1.12397796], [-1.62328545,  0.64667545], [-1.74314104, -0.59664964]]), np.array([[ 0.74505627,  1.97611078, -1.24412333]]), 5), np.array([[ 3.1980455 ,  7.85763489]])))
     """
-    np.random.seed(2)
+    # np.random.seed(1)
     dA = np.random.randn(1,2)
     A = np.random.randn(3,2)
     W = np.random.randn(1,3)
@@ -221,7 +220,7 @@ def L_model_backward_test_case():
     np.array([[ 0.]])),
    np.array([[ 0.41791293,  1.91720367]]))])
    """
-    np.random.seed(3)
+    # np.random.seed(1)
     AL = np.random.randn(1, 2)
     Y = np.array([[1, 0]])
 
@@ -283,7 +282,7 @@ def update_parameters_test_case():
  'db2': 0.86163759922811056,
  'db3': -0.84161956022334572}
     """
-    np.random.seed(2)
+    # np.random.seed(1)
     W1 = np.random.randn(3,4)
     b1 = np.random.randn(3,1)
     W2 = np.random.randn(1,3)
@@ -292,7 +291,7 @@ def update_parameters_test_case():
                   "b1": b1,
                   "W2": W2,
                   "b2": b2}
-    np.random.seed(3)
+    # np.random.seed(1)
     dW1 = np.random.randn(3,4)
     db1 = np.random.randn(3,1)
     dW2 = np.random.randn(1,3)
